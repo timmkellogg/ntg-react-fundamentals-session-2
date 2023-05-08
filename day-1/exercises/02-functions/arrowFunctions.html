@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Arrow Function Review</title>
+    </head>
+    <body>
+        <h1>Arrow Function Review</h1>
+        
+    </body>
+</html>
+<script>
+
+// Code Here
+const students = ['Edward', 'Steven', 'Shashank', 'Yash', 'Vikas']
+
+
+function sayHello(name) {
+    return `Hello, ${name}`
+}
+
+// ternary
+// value ? return if value exists : return if value doesn't exist
+const sayHelloToClass = (students) => {
+    students.forEach((student) => console.log(`Hello, ${student.toUpperCase()}`))
+}
+sayHelloToClass(students)
+
+
+//const capitalizeNames = (students) => students.map((student) => student.toUpperCase())
+
+
+const capsStudents = students.map((student) => student.toUpperCase())
+console.log(capsStudents)
+
+
+
+</script>

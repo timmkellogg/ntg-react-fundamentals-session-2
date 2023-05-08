@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Exercise: Objects</title>
+    </head>
+    <body>
+       <h1>Exercise: Objects</h1>
+    </body>
+</html>
+<script>
+
+// Code Here
+
+// - Define an object called `dreamCar` and assign in the following properties:
+//     - make: string
+//     - model: string
+//     - yearBuilt: number
+//     - color: string
+//     - isElectric: boolean
+//     - odometer: number
+//     - features: array
+
+const dreamCar = {
+    make: 'Chevrolet',
+    model: 'Corvette',
+    yearBuilt: 1964,
+    color: 'red',
+    isElectric: false,
+    odometer: 25000,
+    features: ['leather seats', 'convertible', 'A/C'],
+    'number of wheels': 4,
+    drive: function(miles) {
+        this.odometer = this.odometer + miles
+    }
+}
+
+dreamCar.repaint = function(color) {
+    this.color = color
+}
+
+console.log(JSON.parse(JSON.stringify(dreamCar)))
+
+
+console.log(dreamCar)
+
+// - Define a method called `drive()` that takes in a number and adds that number to the `odometer` property.
+
+// Since this is our *dream* car, let's add some features we'd only have in our dreams, to ensure we're always driving the latest and greatest! 
+
+// - Define a method called `refreshBuild()` that allows us to increment the `yearBuilt` value up by one.
+
+// - Define a method called `repaint()` that takes in a color as an arguement and updates the `color` property.
+
+// - Define a method called `resetMiles()` that sets the `odometer` propety back to 0.
+
+
+
+</script>

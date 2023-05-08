@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>React with JSX</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      //Select DOM element to render on
+      const domContainer = document.querySelector("#app");
+
+      // Create root on selected DOM element
+      const root = ReactDOM.createRoot(domContainer);
+
+      // Create component
+      // const Component = React.createElement('div', {}, ChildComponent)
+
+      // Create component using JSX
+      function Component() {
+        const dreamCar = {
+          make: "dodge",
+          model: "neon",
+          yearBuilt: "2007",
+        };
+
+        const cars = [
+          {
+            make: "dodge",
+            model: "neon",
+            yearBuilt: "2007",
+          },
+          {
+            make: "toyota",
+            model: "camry",
+            yearBuilt: "2020",
+          },
+          {
+            make: "ford",
+            model: "taraus",
+            yearBuilt: "1990",
+          },
+          {
+            make: "ford",
+            model: "taraus",
+            yearBuilt: "1990",
+          },
+        ];
+
+        return (
+          <div>
+            <h1>Hello JSX!</h1>
+            {cars.map((dreamCar, key) => {
+              return (
+                <div style={{border: 'solid'}} key={key}>
+                  <h2>{dreamCar.make}</h2>
+                  <h2>{dreamCar.model}</h2>
+                  <h2>{dreamCar.yearBuilt}</h2>
+                </div>
+              );
+            })}
+          </div>
+        );
+      }
+
+      // Render component at root
+      root.render(<Component />);
+    </script>
+  </body>
+</html>

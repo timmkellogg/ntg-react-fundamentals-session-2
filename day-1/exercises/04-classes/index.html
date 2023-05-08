@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Exercise: Classes</title>
+    </head>
+    <body>
+       <h1>Exercise: Classes</h1>
+    </body>
+</html>
+<script>
+
+// Code Here
+
+// - In a new file, create a `Person` class. Include the following properties:
+//     - firstName
+//     - lastName
+
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+
+// }
+
+// Person.prototype.sayHello = function() {
+//     return `Hello, my name is ${this.firstName}`
+// }
+
+// const tim = new Person('tim', 'kellogg')
+// const bob = new Person('bob', 'mcbob')
+
+// console.log(tim)
+// console.log(bob)
+
+// console.log(tim.sayHello())
+// console.log(bob.sayHello())
+
+// console.log(someString)
+
+class Person {
+
+    constructor(firstName, lastName, age) {
+        console.log('parent constructor running')
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+    }
+
+    greeting() {
+        return `Hello, my name is ${this.firstName}`
+    }
+}
+
+
+class Programmer extends Person {
+    constructor(firstName, lastName, age, languages) {
+        super(firstName, lastName, age)
+
+        this.languages = languages
+    }
+}
+
+const tim = new Programmer('tim', 'kellogg', 28, ['javascript', 'php', 'ruby'])
+
+console.log(tim)
+
+</script>

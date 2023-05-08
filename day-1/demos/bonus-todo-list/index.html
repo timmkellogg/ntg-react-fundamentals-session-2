@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>
+<script>
+
+class ToDoList {
+    constructor(rootElement = document.body) {
+        this.rootElement = rootElement
+        this.tasks = []
+        this.list = document.createElement('ul')
+        this.input = document.createElement('input')
+
+        this.renderInputForm()
+        this.renderList()
+    }
+
+    addToDo() {
+        if(!this.input.value) return
+        
+        this.tasks.push(this.input.value)
+        
+        this.renderList()
+
+        this.input.value = ''
+    }
+
+    deleteToDo(index) {
+        this.tasks.splice(index, 1)
+
+        this.renderList()
+    }
+
+    renderList() {
+        this.list.innerHTML = ''
+
+        this.tasks.forEach((task, index) => {
+            const newTodo = document.createElement('li')
+            newTodo.textContent = task
+
+            const deleteButton = document.createElement('button')
+            deleteButton.textContent = 'delete'
+            deleteButton.onclick = () => {
+                this.deleteToDo(index)
+            } 
+            
+            newTodo.append(deleteButton)
+            this.list.append(newTodo)
+        })
+    }
+
+    renderInputForm() {
+        const addButton = document.createElement('button')
+        addButton.textContent = 'add todo'
+        addButton.onclick = () => {
+            this.addToDo()
+        }
+        
+        this.rootElement.append(this.input)
+        this.rootElement.append(addButton)
+        this.rootElement.append(this.list)
+    }
+}
+
+const toDoList = new ToDoList(document.querySelector('#app'))
+
+</script>

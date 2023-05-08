@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Exercise: Events</title>
+    </head>
+    <body>
+        <h1>Exercise: Events</h1>
+        <form id="my-form" onsubmit="onSignUpSubmit(event)">
+            <h2>Sign Up</h2>
+            <div>
+                <input placeholder='firstName' />
+                <input placeholder='lastName' />
+            </div>
+            <div>
+                <input placeholder='email' id="email" />
+            </div>
+            <div>
+                <input placeholder='password' type="password" id="password" />
+                <input placeholder='Confirm password' type="password" id="confirm-password" />
+            </div>
+            <button>submit</button>
+        </form>
+        
+        <form onsubmit="onLoginSubmit(event)">
+            <h2>Log In</h2>
+            <div>
+                <div>
+                    <input placeholder='email' id="login-email" />
+                </div>
+                <div>
+                    <input placeholder='password' type="password" id="login-password" />
+                </div>
+                <button>submit</button>
+            </div>
+        </form>
+    </body>
+</html>
+<script>
+
+// Code Here
+const users = []
+
+function onSignUpSubmit(event) {
+    event.preventDefault()
+    
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+    const passwordConfirm = document.getElementById('confirm-password').value
+    
+    if(password === passwordConfirm) {
+        users.push({ email: email, password: password })
+        console.log(users)
+        alert('user added')
+    } else {
+        alert('Password does not match')
+    }
+}
+
+function onLoginSubmit(event) {
+    event.preventDefault()
+
+    const email = document.getElementById('login-email').value
+    const password = document.getElementById('login-password').value
+
+    console.log(email, password)
+
+    const matchingUser = users.find(user => user.email === email)
+
+    if(matchingUser) { // if matching email was found
+        if(matchingUser.password === password) {
+            alert('Login succesful')
+        } else {
+            alert('Matching user found, but password was incorrect')
+        } 
+    } else {
+        alert('No user exists')
+    }
+    console.log(matchingUser)
+}
+
+</script>

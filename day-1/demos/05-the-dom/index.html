@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Working with the DOM</title>
+    </head>
+    <body>
+        <h1>The DOM</h1>
+        <div id="app">
+            
+        </div>
+    </body>
+</html>
+<script>
+
+// use querySelector to access DOM elements
+const rootElement = document.querySelector('#app')
+
+// Initialize new element in memory
+const newH1 = document.createElement('h1')
+
+// Add text to new element in memory
+newH1.textContent = 'Hello DOM!'
+
+// Append newH1 to rootElement
+rootElement.append(newH1)
+
+
+</script>

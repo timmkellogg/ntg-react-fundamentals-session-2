@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Handling Events</title>
+    </head>
+    <body>
+        <h1>Handling Events</h1>
+        
+        <div>
+            <h3>Click Event</h3>
+            <button onclick="handleButtonClick()">Click me!</button>
+        </div>
+
+        <div>
+            <h3>Form Event</h3>
+            <form onsubmit="handleFormSubmitted(event)">
+                <input id="form-input" />
+                <button>submit</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Key Event</h3>
+            <input onkeyup="handleKeyPressed(event)" />
+        </div>
+
+        <div>
+            <h3>Input Event</h3>
+            <input oninput="handleInput(event)" />
+        </div>
+    </body>
+</html>
+<script>
+
+function handleButtonClick() {
+    alert('button clicked!')
+}
+
+function handleFormSubmitted(event) {
+    event.preventDefault()
+
+    const input = document.querySelector('#form-input')
+
+    alert(`form submitted! Input value: ${input.value}`)
+}
+
+function handleKeyPressed(event) {
+    alert(`Key pressed: ${event.key}`)
+}
+
+function handleInput(event) {
+    console.log(event.target.value)
+}
+
+</script>
