@@ -3,28 +3,46 @@
         <title>Variables, Types, & Template Literals</title>
     </head>
     <body>
-
+        <h1>Variables, Types, & Template Literals</h1>
     </body>
 </html>
 <script>
 
 // let
-let someString = 'this is a string'
-let someNum = 4 
+// let someString 
+// someString = 'this is a string'
 
-// const
-const someBool = true
-const someArray = [1, 2, 3, 4, 5]
-const someObj = {someProp: 'some value', someOtherProp: 'some other value'}
 
-// concatenation (without template literal)
-const firstName = 'tim'
+// let someNum = 4 
+
+// // const
+// const someBool = true
+// const someArray = [1, 2, 3, 4, 5]
+
+// const someObj = {someProp: 'some value', someOtherProp: 'some other value'} 
+// const someObjToo = someObj // deep cloning
+// const someObjTooToo = {...someObj} // shallow cloning
+
+// someObjToo.someProp = 'some new value'
+
+// console.log(someObj)
+// console.log(someObjToo)
+
+
+
+// // concatenation (without template literal)
+const firstName = "tim"
 const lastName = 'kellogg'
 
-const fullName = firstName + ' ' + lastName
+//const fullName = firstName + ' ' + lastName
+
+const someSentence = 'This is me writing a string. It\'s pretty cool'
+
+const someQuote = "George Washington once said \"I can never tell a lie\""
 
 // Template Literal
-// const fullName = `${firstName} ${lastName}`
+const fullName = `I can write "chicago" in this string, including expressions, like this: ${firstName} ${lastName}`
+console.log(fullName)
 
 
 </script>

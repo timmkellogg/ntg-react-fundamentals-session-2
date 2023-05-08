@@ -11,15 +11,15 @@
             //Select DOM element to render on
             const domContainer = document.querySelector('#app')
 
-            // Create root on selected DOM element
+            // // Create root on selected DOM element
             const root = ReactDOM.createRoot(domContainer)
 
-            const ChildComponents = React.createElement('h1', {}, 'THIS IS BIG TEXT')
+            const ChildComponent = React.createElement('h1', {}, 'THIS IS BIG TEXT')
 
-            // Create component
-            const Component = React.createElement('div', {}, ChildComponents)
+            // // Create component
+            const Component = React.createElement('div', {}, ChildComponent)
 
-            // Render component at root
+            // // Render component at root
             root.render(Component)
 
         </script>

@@ -8,14 +8,46 @@
 </html>
 <script>
 
-setTimeout(add, 3000)
-
-function add() {
-    console.log(2 + 2)
+// traditional function
+function add(num1, num2) {
+    return num1 + num2
 }
 
-setTimeout(() => {
-    add(1, 2)
-}, 5000)
+// arrow function
+const subtract = (num1, num2) => {
+    return num1 - num2
+}
+
+// console.log(add(2, 4)) // 6
+
+// arrow function 
+// callback function
+// anonymous function
+
+// const callbackFunction = () => {
+//     console.log('this is the callback function')
+// }
+
+// function someFunc(callbackFunction) {
+//     console.log('this is the parent function')
+//     callbackFunction()
+// }
+
+// someFunc(callbackFunction)
+
+const someArray = [4, 8, 15, 16, 23, 42] // 
+
+function someFunc() {
+    console.log('!')
+}
+
+const numsOver15 = someArray.filter(function(num) {
+    console.log(num)
+    return num > 15
+})
+
+console.log(someArray)
+console.log(numsOver15)
+
 
 </script>

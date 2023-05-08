@@ -3,7 +3,7 @@
         <title>Working with the DOM</title>
     </head>
     <body>
-        <h1>The DOM</h1>
+        <h1>The Document Object Model</h1>
         <div id="app">
             
         </div>
@@ -12,16 +12,19 @@
 <script>
 
 // use querySelector to access DOM elements
-const rootElement = document.querySelector('#app')
+const rootElement = document.getElementById('app')
 
-// Initialize new element in memory
-const newH1 = document.createElement('h1')
 
-// Add text to new element in memory
-newH1.textContent = 'Hello DOM!'
+// // Initialize new element in memory
+const newButton = document.createElement('button')
 
-// Append newH1 to rootElement
-rootElement.append(newH1)
+// // Add text to new element in memory
+newButton.textContent = 'Hello DOM!'
+
+console.log(newButton)
+
+// // Append newH1 to rootElement
+rootElement.append(newButton)
 
 
 </script>

@@ -26,44 +26,14 @@
 
       // Create component using JSX
       function Component() {
-        const dreamCar = {
-          make: "dodge",
-          model: "neon",
-          yearBuilt: "2007",
-        };
-
-        const cars = [
-          {
-            make: "dodge",
-            model: "neon",
-            yearBuilt: "2007",
-          },
-          {
-            make: "toyota",
-            model: "camry",
-            yearBuilt: "2020",
-          },
-          {
-            make: "ford",
-            model: "taraus",
-            yearBuilt: "1990",
-          },
-          {
-            make: "ford",
-            model: "taraus",
-            yearBuilt: "1990",
-          },
-        ];
-
+        
         return (
           <div>
             <h1>Hello JSX!</h1>
             {cars.map((dreamCar, key) => {
               return (
                 <div style={{border: 'solid'}} key={key}>
-                  <h2>{dreamCar.make}</h2>
-                  <h2>{dreamCar.model}</h2>
-                  <h2>{dreamCar.yearBuilt}</h2>
+                  <h1>some h1</h1>
                 </div>
               );
             })}

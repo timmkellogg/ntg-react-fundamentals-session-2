@@ -13,22 +13,33 @@ const tim = {
     firstName: 'Tim',
     lastName: 'Kellogg',
     age: 28,
-    likesPineapple: false,
+    likesPinapple: false,
     hobbies: ['traveling', 'weightlifting', 'watching movies'],
-    greetings: function () {
+    greetings: function() {
+        
         console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`)
     } 
 }
 
-// Dot Notation
+console.log(tim)
+
+// // Dot Notation
 console.log(tim.firstName)
 
-console.log(tim.hobbies[1])
 
-// Bracket Notation
-console.log(tim['age'])
+// // Bracket Notation
+console.log(tim['likesPinapple'])
 
-// Calling a object method
+// // Calling a object method
 tim.greetings()
+
+
+/*
+
+this is a 
+multi-line
+comment
+
+*/
 
 </script>
