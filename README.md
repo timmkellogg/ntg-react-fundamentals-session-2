@@ -18,3 +18,4 @@ In this 4-day React course, students will learn the fundamentals of React.js, be
 ## Requirements
 
 This course assumes students are familiar in progamming in at least one programming language, preferably JavaScript.
+
