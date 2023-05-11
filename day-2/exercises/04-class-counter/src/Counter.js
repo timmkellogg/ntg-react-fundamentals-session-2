@@ -26,9 +26,9 @@ class Counter extends Component {
         this.setState({ count: this.state.count -1 })
     }
 
-    // handleReset = () => {
-    //     this.setState({ count: this.props.initialCount })
-    // }
+    handleReset = () => {
+        this.setState({ count: this.props.initialCount })
+    }
     
     render() {
         return (
@@ -36,7 +36,7 @@ class Counter extends Component {
                 <h2 style={{backgroundColor: this.state.count > 10 && 'red'}}>Count: {this.state.count}</h2>
                 <button onClick={this.handleIncrement}>+1</button>
                 <button onClick={this.handleDecrement}>-1</button>
-                <button onClick={() => this.setState({ count: this.props.initialCount })}>reset</button>
+                <button onClick={this.handleReset}>reset</button>
             </div>
         )
     }
